@@ -1,7 +1,7 @@
-import {DefaultDocument, Studio, defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import { DefaultDocument, Studio, defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
+import { visionTool } from '@sanity/vision';
+import { schemaTypes } from './schemas';
 import { myTheme } from './theme';
 import StudioNavbar from './components/StudioNavbar';
 import Logo from './components/Logo';
@@ -17,20 +17,20 @@ export default defineConfig({
   title: 'ZAHID_Studio',
   projectId,
   dataset,
-  plugins: [deskTool({
-    defaultDocumentNode: getDefaultDocumentNode,
-}), visionTool()],
+  plugins: [
+    deskTool({
+      defaultDocumentNode: getDefaultDocumentNode,
+    }),
+    visionTool(),
+  ],
   schema: {
     types: schemaTypes,
   },
-
   studio: {
     components: {
-       logo:Logo,
-       navbar:StudioNavbar,
-
+      logo: Logo,
+      navbar: StudioNavbar,
+    },
   },
-},
-
-  theme:myTheme,
-})
+  theme: myTheme,
+});

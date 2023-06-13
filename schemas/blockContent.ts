@@ -25,7 +25,7 @@ export default defineType({
       styles: [
         {title: 'Normal', value: 'normal'},
         {title: 'H1', value: 'h1'},
-        {title: 'H2', value: 'h2'}, //SHA256:Q1QO12z5O/DoyexJr4UEwdDIuQCMHM/hla88V7L+8Ps
+        {title: 'H2', value: 'h2'}, 
 
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
