@@ -84,18 +84,16 @@ async function Post({ params: { slug } }: Props) {
             </div>
 
             <h2 className="italic pt-10 text-white">{post.description}</h2>
-            <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-              {post.categories
-                ? post.categories.map((category) => (
-                    <div
-                      key={category._id}
-                      className="bg-[#0A7DFF] text-center text-white px-3 py-2 rounded-full text-sm font-semibold m-1"
-                    >
-                      {category.title}
-                    </div>
-                  ))
-                : null}
-            </div>
+            {/* <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+              {post.categories?.map((category) => (
+                <p
+                  key={category._id}
+                  className="text-xs font-bold bg-[#0A7DFF] px-2 py-1 rounded"
+                >
+                  {category.title}
+                </p>
+              ))}
+            </div> */}
           </section>
         </div>
       </section>
