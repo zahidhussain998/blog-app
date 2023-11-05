@@ -3,7 +3,7 @@ import "../../styles/globals.css"
 
 function privacy() {
   return (
-    <div className="max-w-7xl mx-auto flex items-center">
+    <div className="max-w-5xl mx-auto flex items-center justify-center shadow-md">
       <div className="max-w-7xl mx-auto container py-8">
   
         <h1 className="text-3xl font-bold text-center mb-8">Privacy Policy</h1>

@@ -33,13 +33,15 @@ const ContactMe = (props: Props) => {
            <div className="flex items-center justify-center space-x-5">
             <MapPinIcon className="text-[#0A7DFF] h-7 w-7 animate-pulse " />
             <p className="text-2xl text-center text-white" >USA</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#0A7DFF] h-7 w-7 animate-pulse" />
-            <p className="text-2xl text-white">zohaibhyd321@gmail.com</p>
-          </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
+          </div>
+          <div className="flex items-center space-x-5 justify-center max-w-600px w-fit ">
+  <p className="text-2xl text-center md:text-left space-y-4 text-[#0A7DFF] animate-pulse">
+    Let us know if you have any questions or any 
+    suggestion say to us.<br/> We would love to hear from you!
+  </p>
+</div>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit max-w-600px">
           <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
             <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
@@ -49,7 +51,7 @@ const ContactMe = (props: Props) => {
 
           <textarea  {...register('message')}  placeholder="Message" className="contactInput" />
 
-          <button type="submit" className="bg-[#0A7DFF] py-5 px-10 rounded-md text-black font-bold text-ls" >
+          <button type="submit" className="bg-[#0A7DFF] py-5 px-10 rounded-md  font-bold text-ls relative flex h-[65px] w-100 items-center justify-center text-white " >
             Submits
           </button>
 
