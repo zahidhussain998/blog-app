@@ -23,24 +23,20 @@ const ContactMe = (props: Props) => {
   };
 
   return (
-    <div className="bg-slate-50 flex flex-col justify-center items-center md:flex-row md:space-x-5 md:text-left">
+    <div className="w-full h-screen bg-gradient-to-r to-black  from-[#000000] flex flex-col justify-center items-center md:flex-row md:space-x-5 md:text-left">
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-4xl font-semibold text-center text-white">
           Contact {""}
-          <span className="decoration-[#F7AB0A]/50 underline">Us</span>
+          <span className="decoration-[#0A7DFF]/50 underline text-white">Us</span>
         </h4>
         <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+923403107703</p>
-          </div>
-          <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse " />
-            <p className="text-2xl text-center">Pakistan</p>
+           <div className="flex items-center justify-center space-x-5">
+            <MapPinIcon className="text-[#0A7DFF] h-7 w-7 animate-pulse " />
+            <p className="text-2xl text-center text-white" >USA</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">zohaibhyd321@gmail.com</p>
+            <EnvelopeIcon className="text-[#0A7DFF] h-7 w-7 animate-pulse" />
+            <p className="text-2xl text-white">zohaibhyd321@gmail.com</p>
           </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
@@ -53,7 +49,7 @@ const ContactMe = (props: Props) => {
 
           <textarea  {...register('message')}  placeholder="Message" className="contactInput" />
 
-          <button type="submit" className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-ls" >
+          <button type="submit" className="bg-[#0A7DFF] py-5 px-10 rounded-md text-black font-bold text-ls" >
             Submits
           </button>
 
