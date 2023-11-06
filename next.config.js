@@ -8,4 +8,3 @@ module.exports = {
     domains: ["cdn.sanity.io", "avatars.githubusercontent.com", "this.png", "rap.png"],
   },
 };
-6
