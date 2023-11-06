@@ -13,7 +13,7 @@ type Props = {
 };
 
 
-async function generateStaticParams() {
+export async function generateStaticParams() {
   const query = groq`*[_type=='post'] {
     slug
   }`;
