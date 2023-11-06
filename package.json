@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export":"next build && next export",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,11 +20,13 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "install": "^0.13.0",
     "next": "13.2.4",
     "next-sanity": "^4.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-lite-youtube-embed": "^2.3.52",
     "react-portable-text": "^0.6.0",
     "react-social-icons": "^5.15.0",
     "sanity": "^3.0.0",
