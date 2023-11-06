@@ -8,11 +8,11 @@ export default function Header() {
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
-            className="rounded-full"
-            src="/this.png"
-            width={50}
-            height={50}
+            src="/logo.png"
             alt="logo"
+            width={40}
+            height={40}
+            className="cursor-pointer"
           />
         </Link>
         <Link href="/">
