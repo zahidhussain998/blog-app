@@ -6,15 +6,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
       <div className="flex items-center space-x-2">
-        <Link href="/">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={40}
-            height={40}
-            className="cursor-pointer"
-          />
-        </Link>
+      
         <Link href="/">
   <h1 className="text-2xl">
     <span className="text-white">Radiant</span>{" "}
