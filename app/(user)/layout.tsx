@@ -21,6 +21,7 @@ export default function RootLayout({
         <Banner />
         <div className="relative min-h-screen">{children}</div>
         <div className="position-fixed">
+          <hr className="border-[#0A7DFF]"/>
           <Footer />
         </div>
       </body>
