@@ -1,35 +1,46 @@
 // bg-[#0A7DFF]
 
 import Link from "next/link";
+import Image from "next/image";
 
 
 
 export default function FooterThree() {
   return (
-    <section className="relative overflow-hidden bg-[#0A7DFF] py-8">
+    <section className="relative overflow-hidden bg-black py-8">
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
             <a href="#">
               <div className="inline-flex items-center">
-                <span className="ml-4 text-lg font-bold">Radiant Pulse</span>
+              <Image
+            src="/Footer.png"
+            alt="logo"
+            width={60}
+            height={60}
+            className="cursor-pointer"
+          />
+                <div className="flex items-center space-x-2">
+                <span className="text-white">Radiant</span>{""}
+                <span className="text-[#0A7DFF]">Pulse</span>   
+                </div>
               </div>
             </a>
           </div>
           <div className="w-auto p-8">
             <ul className="-m-5 flex flex-wrap items-center">
               <li className="p-5">
-                <Link className="font-medium text-white hover:text-gray-700" href="/privacy">
+                <Link className="font-medium text-white hover:text-[#0A7DFF]" href="/privacy">
                   Privacy Policy
                 </Link>
               </li>
               <li className="p-5">
-                <Link className="font-medium text-white hover:text-gray-700" href="/trems">
+                <Link className="font-medium text-white hover:text-[#0A7DFF]" href="/trems">
                   Terms of Service
                 </Link>
               </li>
               <li className="p-5">
-                <Link className="font-medium text-white hover:text-gray-700" href="/contact">
+                <Link className="font-medium text-white hover:text-[#0A7DFF]" href="/contact">
                 Contact Us
                 </Link>
               </li>
@@ -40,7 +51,7 @@ export default function FooterThree() {
             <div className="-m-1.5 flex flex-wrap">
               <div className="w-auto p-1.5">
                 <a href="#">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#0A7DFF] hover:border-gray-400">
                     <svg
                       width="8"
                       height="14"
@@ -58,7 +69,7 @@ export default function FooterThree() {
               </div>
               <div className="w-auto p-1.5">
                 <a href="#">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#0A7DFF] hover:border-gray-400">
                     <svg
                       width="14"
                       height="11"
@@ -76,7 +87,7 @@ export default function FooterThree() {
               </div>
               <div className="w-auto p-1.5">
                 <a href="#">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#0A7DFF] hover:border-gray-400">
                     <svg
                       width="16"
                       height="15"
