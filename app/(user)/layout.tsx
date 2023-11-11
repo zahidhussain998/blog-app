@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="max-w-7xl mx-auto scroll-smooth bg-black">
-        <link rel="icon" href="/rap.png" />
+      <link rel="icon" href="/icon.png" />
         <Header />
         <Banner />
         <div className="relative min-h-screen">{children}</div>
