@@ -1,4 +1,3 @@
-// bg-[#0A7DFF]
 
 import Link from "next/link";
 import Image from "next/image";
@@ -106,6 +105,9 @@ export default function FooterThree() {
             </div>
           </div>
         </div>
+        <div className="text-white flex justify-center text-center mr-20px py-10">
+            © Copyright 2023. All Rights Reserved by Radiant Pulse.
+         </div>
       </div>
     </section>
   )
