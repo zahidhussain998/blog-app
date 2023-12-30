@@ -11,7 +11,7 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
       S.view
         .component(Iframe)
         .options({
-          url: 'https://radiant-pluse.vercel.app/api/preview', // Replace with your Vercel URL
+          url: 'https://radiant-pluse-site.vercel.app/api/preview', // Replace with your Vercel URL
           defaultSize: 'desktop',
           reload: {
             button: true,
