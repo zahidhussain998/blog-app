@@ -4,6 +4,9 @@ Welcome to the Radiant Pulse Blog Website repository. This website is designed t
 
 ![Radiant Pulse Blog Website Screenshot]
 
+![Screenshot from 2023-12-30 20-42-10](https://github.com/zahidhussain998/Blog-app/assets/100913055/457e3093-1c46-43d4-bcf4-d10713aed727)
+
+
 ## Table of Contents
 
 - [Features](#features)
