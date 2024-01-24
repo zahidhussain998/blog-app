@@ -14,6 +14,8 @@ const query = groq`
 
 `;
 
+export const revalidate = 20
+
 export default async function HomePage() {
   const isPreview = previewData();
 

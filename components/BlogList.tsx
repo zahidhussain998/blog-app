@@ -10,6 +10,9 @@ type Props = {
   posts: Post[];
 };
 
+export const revalidate = 20;
+
+
 function BlogList({ posts }: Props) {
   return (
     <div>
