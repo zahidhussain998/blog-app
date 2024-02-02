@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+"use client";
 import Image from "next/image";
 import { useState } from 'react';
 import urlFor from "../lib/urlFor";
@@ -16,8 +17,13 @@ export const revalidate = 20;
 
 function BlogList({ posts }: Props) {
     const [visiblePosts, setVisiblePosts] = useState(6); // State for visible posts
+    const [searchQuery, setSearchQuery] = useState<string>(''); // State for search query
 
 
+    // Filter posts based on search query
+  const filteredPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
     const loadMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 6);
@@ -84,7 +90,8 @@ function BlogList({ posts }: Props) {
             </div>
           </ClientSideRoute>
         ))}
-              <div className="flex justify-center mb-10">
+        </div>
+ <div className="flex justify-center mb-10">
   {filteredPosts.length > visiblePosts && (
     <button
       className="flex items-center bg-white text-black px-4 py-2 mt-4 rounded-xl"
@@ -104,7 +111,6 @@ function BlogList({ posts }: Props) {
     </button>
   )}
 </div>
-      </div>
 
     </div>
   );
