@@ -44,8 +44,8 @@ async function Post({ params: { slug } }: Props) {
   console.log(post);
 
   return (
-    <article className="px-10 pb-20 text-white">
-      <section className="space-y-2 border border-[#0A7DFF] text-white">
+    <article className="px-10 pb-20">
+      <section className="space-y-2 border border-[#0A7DFF] ">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
@@ -59,7 +59,7 @@ async function Post({ params: { slug } }: Props) {
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
                 <h1 className="text-4xl font-extrabold">{post.title}</h1>
-                <p className="text-white">
+                <p className="">
                   {new Date(post._createdAt).toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",
@@ -76,7 +76,7 @@ async function Post({ params: { slug } }: Props) {
                   height={40}
                 />
                 <div className="w-64">
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="text-lg font-bold">
                     {post.author.name}
                   </h3>
                   <div>{/* author a10 */}</div>
@@ -84,7 +84,7 @@ async function Post({ params: { slug } }: Props) {
               </div>
             </div>
 
-            <h2 className="italic pt-10 text-white">{post.description}</h2>
+            <h2 className="italic pt-10">{post.description}</h2>
             <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
             {post.categories &&
                   post.categories.map(
@@ -93,7 +93,7 @@ async function Post({ params: { slug } }: Props) {
                     ) => (
                       <p
                         key={category}
-                        className="bg-gray-800 text-white px-1 rounded-full text-sm font-semibold ml-4"
+                        className="bg-gray-800 px-1 rounded-full text-sm font-semibold ml-4"
                       >
                         {category}
                       </p>
