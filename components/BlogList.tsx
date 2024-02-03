@@ -50,7 +50,7 @@ function BlogList({ posts }: Props) {
                   alt={post.author.name}
                   fill
                 />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
+                <div className="absolute bottom-0 w-full bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 flex justify-between">
                   <div>
                     <p className="font-bold">{post.title}</p>
                     <p>
@@ -70,7 +70,7 @@ function BlogList({ posts }: Props) {
                     ) => (
                       <p
                         key={category}
-                        className="bg-gray-800 text-white px-1 rounded-full text-sm font-semibold ml-4"
+                        className="bg-gray-80 px-1 rounded-full text-sm font-semibold ml-4"
                       >
                         {category}
                       </p>
@@ -79,9 +79,9 @@ function BlogList({ posts }: Props) {
                   </div>
                 </div>
               </div>
-              <div className="ml-5 flex-1">
-                <p className="underline decoration-4.2 decoration-[#0A7DFF] text-lg font-bold text-white">{post.title}</p>
-                <p className="line-clamp-2 text-gray-500">{post.description}</p>
+              <div className="ml-5 flex-1 mt-5">
+                <p className="underline decoration-4.2 decoration-[#0A7DFF] text-lg font-bold">{post.title}</p>
+                <p className="line-clamp-2">{post.description}</p>
               </div>
               <p className="ml-5 font-bold flex items-center group-hover:underline text-[#0A7DFF]">
                 Read Post

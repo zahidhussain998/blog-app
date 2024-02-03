@@ -2,6 +2,7 @@ import Header from "components/Header";
 import "../../styles/globals.css";
 import Banner from "components/Banner";
 import Footer from "components/Footer";
+import Providers from "components/Providers";
 
 export const metadata = {
   title: "Radiant Pulse",
@@ -15,7 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-7xl mx-auto scroll-smooth bg-black">
+      <body className="max-w-7xl mx-auto scroll-smooth">
+        <Providers>
       <link rel="icon" href="/icon.png" />
         <Header />
         <Banner />
@@ -24,6 +26,7 @@ export default function RootLayout({
           <hr className="border-[#0A7DFF]"/>
           <Footer />
         </div>
+        </Providers>
       </body>
     </html>
   );
