@@ -24,14 +24,7 @@ export default function Header() {
   </h1>
 </Link>
 
-  <Link
-          href="/Aboutus"
-          className="relative flex h-[20px] w-20 items-center justify-center text-white rounded-full"
-        >
-        <span className="relative z-10"> 
-        About Us
-          </span> 
-        </Link>
+
       </div>
 
       <div className="flex justify-center align-baseline items-center gap-5">
