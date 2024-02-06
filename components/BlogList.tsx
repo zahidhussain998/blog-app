@@ -63,27 +63,21 @@ function BlogList({ posts }: Props) {
                   </div>
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                       
-                  {post.categories &&
-                  post.categories.map(
-                    (
-                      category // eslint-disable-next-line react/jsx-key
-                    ) => (
-                      <p
-                        key={category}
-                        className="bg-gray-80 px-1 rounded-full text-sm font-semibold ml-4"
-                      >
-                        {category}
-                      </p>
-                    )
-                  )}
+                 {post.categories?.map((category) => (
+                  
+                    <p key={category._id} className="text-xs bg-[#0A7DFF] text-white px-2 py-1 rounded-full">
+                      {category.title}
+                    </p>
+                  ))}
+                  
                   </div>
                 </div>
               </div>
               <div className="ml-5 flex-1 mt-5">
                 <p className="underline decoration-4.2 decoration-[#0A7DFF] text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2">{post.description}</p>
+                <p className="line-clamp-2 mt-3">{post.description}</p>
               </div>
-              <p className="ml-5 font-bold flex items-center group-hover:underline text-[#0A7DFF]">
+              <p className="ml-5 font-bold flex items-center group-hover:underline text-[#0A7DFF] mt-3">
                 Read Post
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </p>

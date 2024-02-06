@@ -20,8 +20,7 @@ export default function FooterThree() {
             className="cursor-pointer"
           />
                 <div className="flex items-center space-x-2">
-                <span className="text-white">Radiant</span>{""}
-                <span className="text-[#0A7DFF]">Pulse</span>   
+                <span className="text-white">NETIALAP.COM</span>{""}
                 </div>
               </div>
             </a>
@@ -106,7 +105,7 @@ export default function FooterThree() {
           </div>
         </div>
         <div className="text-white flex justify-center text-center mr-20px py-10">
-            © Copyright 2023. All Rights Reserved by Radiant Pulse.
+            © Copyright 2023. All Rights Reserved by NETIALAP.
          </div>
       </div>
     </section>
