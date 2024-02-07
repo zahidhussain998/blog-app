@@ -3,3 +3,18 @@
 @tailwind utilities;
 
 
+/* styles/globals.css */
+
+.loader {
+    --duration: 3s;
+    --primary: rgba(39, 94, 254, 1);
+    --primary-light: #2f71ff;
+    --primary-rgba: rgba(39, 94, 254, 0);
+    width: 200px;
+    height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  /* ... (rest of your CSS code) ... */
+  

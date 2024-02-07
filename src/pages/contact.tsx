@@ -23,16 +23,16 @@ const ContactMe = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-screen bg-gradient-to-r to-black  from-[#000000] flex flex-col justify-center items-center md:flex-row md:space-x-5 md:text-left">
+    <div className="w-full h-screen flex flex-col justify-center items-center md:flex-row md:space-x-5 md:text-left">
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center text-white">
+        <h4 className="text-4xl font-semibold text-center">
           Contact {""}
-          <span className="decoration-[#0A7DFF]/50 underline text-white">Us</span>
+          <span className="decoration-[#0A7DFF]/50 underline ">Us</span>
         </h4>
         <div className="space-y-10">
            <div className="flex items-center justify-center space-x-5">
             <MapPinIcon className="text-[#0A7DFF] h-7 w-7 animate-pulse " />
-            <p className="text-2xl text-center text-white" >USA</p>
+            <p className="text-2xl text-center " >USA</p>
         </div>
           </div>
           <div className="flex items-center space-x-5 justify-center max-w-600px w-fit ">
@@ -43,8 +43,8 @@ const ContactMe = (props: Props) => {
 </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit max-w-600px">
           <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-            <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
-            <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
+            <input {...register('name')} placeholder="First Name" className="contactInput" type="text" />
+            <input {...register('name')} placeholder="Last Name" className="contactInput" type="text" />
             <input  {...register('email')}  placeholder="Email" className="contactInput" type="email" />
           </div>
           <input  {...register('subject')}  placeholder="Subject" className="contactInput" type="text" />

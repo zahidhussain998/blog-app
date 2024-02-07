@@ -32,9 +32,19 @@ function BlogList({ posts }: Props) {
 
   return (
     <div>
-   
-      <hr className="border-[#0A7DFF] md-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+
+     
+      <div className="flex justify-center mt-10">
+      
+        <input
+          type="text"
+          placeholder="Search Posts"
+          className="w-full h-14 rounded-sm placeholder-gray-500 text-gray-500 outline-none bg-transparent dark:text-orange-400 flex-1"
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+      <hr className="border-[#0A7DFF]"/>
+      <div className="grid grid-cols-1 sm:grid-cols-3 px-10 gap-10 gap-y-16 pb-24 mt-7">
         {/* post */}
         {filteredPosts.slice(0, visiblePosts).map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
@@ -45,7 +55,7 @@ function BlogList({ posts }: Props) {
              ease-out"
               >
                 <Image
-                  className="object-cover object-left lg:object-center"
+                  className="object-cover object-left lg:object-center h-10"
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
@@ -73,11 +83,33 @@ function BlogList({ posts }: Props) {
                   </div>
                 </div>
               </div>
-              <div className="ml-5 flex-1 mt-5">
+              <div className=" mt-5">
                 <p className="underline decoration-4.2 decoration-[#0A7DFF] text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2 mt-3">{post.description}</p>
+                <p className="line-clamp-2 mt-3 mr-10">{post.description}</p>
               </div>
-              <p className="ml-5 font-bold flex items-center group-hover:underline text-[#0A7DFF] mt-3">
+              <div className="flex items-center space-x-2 flex-wrap">
+                    <Image
+                      className="rounded-full"
+                      src={urlFor(post.author.image).url()}
+                      alt={post.author.name}
+                      width={50}
+                      height={50}
+                    />
+                    <div className="w-full md:w-64 mt-5">
+                      <h3 className="text-lg">
+                        {post.author.name}
+                <p className="">
+                  {new Date(post._createdAt).toLocaleDateString("en-US", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
+                      </h3>
+                      <div>{/* author a10 */}</div>
+                    </div>
+                  </div>
+              <p className=" font-bold flex items-center group-hover:underline text-[#0A7DFF] mt-3">
                 Read Post
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </p>
