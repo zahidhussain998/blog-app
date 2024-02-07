@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
 
 
-          <Link href="/sponsor" className="">
+          <Link href="/sponser" className="">
             <h3>sponsor</h3>
           </Link>
           
