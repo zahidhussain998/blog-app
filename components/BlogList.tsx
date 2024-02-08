@@ -44,7 +44,7 @@ function BlogList({ posts }: Props) {
         />
       </div>
       <hr className="border-[#0A7DFF]"/>
-      <div className="grid grid-cols-1 sm:grid-cols-3 px-10 gap-10 gap-y-16 pb-24 mt-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 px-10 gap-10 gap-y-16 pb-24 mt-7">
         {/* post */}
         {filteredPosts.slice(0, visiblePosts).map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
@@ -74,7 +74,7 @@ function BlogList({ posts }: Props) {
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                  {post.categories?.map((category) => (
                   
-                    <p key={category._id} className="text-xs bg-[#0A7DFF] text-white px-2 py-1 rounded-full">
+                    <p key={category._id} className=" text-center text-xs bg-[#0A7DFF] text-white px-3 py-1 rounded-full font-semibold">
                       {category.title}
                     </p>
                   ))}
