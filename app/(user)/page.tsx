@@ -8,10 +8,10 @@ import BlogList from "../../components/BlogList";
 
 
 const query = groq`
-  *[_type == "post"] {
+  *[_type == 'post'] {
     ...,
     author->,
-    category[]->
+    categories[]->
   } | order(_createdAt desc)
 
 `;
@@ -44,6 +44,7 @@ export default async function HomePage() {
   }
 
   const posts = await client.fetch(query);
+  console.log(posts)
 
   return <BlogList posts={posts} />;
 }

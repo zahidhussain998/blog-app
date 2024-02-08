@@ -28,7 +28,7 @@ const AboutPage: React.FC = () => {
 
     <p className="mt-10">
       For questions or topic suggestions, reach out at netilap@netilap.com. Thank you for
-      being a part of the Netialp.com community. Let's learn, grow, and thrive together!
+      being a part of the Netialp.com community. Let-s learn, grow, and thrive together!
     </p>
   </div>
   );
