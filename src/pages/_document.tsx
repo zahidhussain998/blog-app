@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" suppressHydrationWarning>
         <Head>
-      <link rel="icon" href="/icon.png" />
+      <link rel="icon" href="/n.png" />
         </Head>
         <body>
          <Providers>

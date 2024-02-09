@@ -1,7 +1,7 @@
 function Banner() {
   return (
     <div className=" flex items-center flex-col lg:flex-row lg:space-x-5 justify-between font-bold
-    px-10 py-5 mb-10 max-w-7xl  ">
+    px-10 py-5 mb-10 max-w-7xl  mt-5 p-5">
       <div className="">
         <h2 className="text-7xl "> Stay inquisitive </h2>
     <h2 className="ml-2 md:mt-3 ">welcome to {""}
