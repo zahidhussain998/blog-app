@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+     
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>
             <div className="bg-primary w-full overflow-hidden">

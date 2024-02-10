@@ -8,7 +8,7 @@ const Sponsor: React.FC = () => {
         <h2 className="text-6xl mb-16">Sponsor</h2>
 
         <p className='mr-20'>
-          Get your product in front of thousands of freelancers and support Freelance Things at the same time. The Freelance Things audience is highly-engaged and actively searching for recommendations.
+          Get your product in front of thousands of people and support Netialap.com Things at the same time. Our highly-engaged audience is actively searching for recommendations.
         </p>
       </section>
 
@@ -69,7 +69,7 @@ const Sponsor: React.FC = () => {
 
       <section>
         <h3 className="text-xl font-semibold">Contact</h3>
-        <p className='mb-16'>If you have any questions about sponsorship — send an email to <a className='bg-[#0A7DFF]'>zahidzahidhusssain@gmail</a>.</p>
+        <p className='mb-16'>If you have any questions about sponsorship — send an email to <a className='bg-[#0A7DFF]'>Netialap@gmail.com</a>.</p>
       </section>
     </div>
   );

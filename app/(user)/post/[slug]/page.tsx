@@ -47,7 +47,6 @@ async function Post({ params: { slug } }: Props) {
 
   const post: Post = await client.fetch(query, { slug });
 
-  console.log(post);
 
   return (
     <article className="px-4 md:px-10 pb-20 max-w-7xl mx-auto">
@@ -66,6 +65,8 @@ async function Post({ params: { slug } }: Props) {
               <div>
                 <h1 className="text-3xl md:text-4xl font-extrabold">{post.title}</h1>
                 <h2 className="italic pt-6 ">{post.description}</h2>
+                <hr className=" border-[#0A7DFF] mt-10"/>
+
                   <div className="flex items-center space-x-2 ">
                     <Image
                       className="rounded-full"
@@ -104,7 +105,7 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <hr/>
+      <hr className=" border-[#0A7DFF]"/>
       <div className="max-w-2xl mx-auto">
         <PostContent body={post.body} />
       </div>
