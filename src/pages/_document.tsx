@@ -3,15 +3,23 @@ import Header from 'components/Header';
 import Providers from 'components/Providers';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 // import Providers from '../../components/providers';
-
+export const metadata = {
+  title: "netialap.com",
+  description: "Created by Zahid hussain",
+};
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" suppressHydrationWarning>
-        <Head>
+      <Head>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/n.png" />
-        </Head>
+  <title>{metadata.title}</title>
+  <meta name="description" content={metadata.description} />
+  {/* Add other head elements as needed */}
+</Head>
         <body>
          <Providers>
           <div className='max-w-7xl mx-auto'>

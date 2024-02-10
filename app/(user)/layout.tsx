@@ -3,6 +3,7 @@ import "../../styles/globals.css";
 import Banner from "components/Banner";
 import Footer from "components/Footer";
 import Providers from "components/Providers";
+import Head from "next/head";
 
 export const metadata = {
   title: "netialap.com",
@@ -14,6 +15,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  <Head>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{metadata.title}</title>
+  <meta name="description" content={metadata.description} />
+  {/* Add other head elements as needed */}
+</Head>
   return (
     <html lang="en">
       <body>
@@ -28,6 +37,7 @@ export default function RootLayout({
                   <hr className="border-[#0A7DFF]"/>
                    {/* <div className="mt-5"> */}
                   <Banner />
+                  <hr className="border-[#0A7DFF]"/>
 
                    {/* </div> */}
                   <div className="relative min-h-screen">{children}

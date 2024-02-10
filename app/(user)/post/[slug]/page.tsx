@@ -105,7 +105,6 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <hr className=" border-[#0A7DFF]"/>
       <div className="max-w-2xl mx-auto">
         <PostContent body={post.body} />
       </div>
