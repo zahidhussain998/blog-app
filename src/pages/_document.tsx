@@ -3,6 +3,7 @@ import Header from "components/Header";
 import Providers from "components/Providers";
 import { Metadata } from "next";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+
 export const metadata: Metadata = {
   title: "netialap.com",
   description: "Created by Zahid hussain",

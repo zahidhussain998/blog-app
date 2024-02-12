@@ -1,3 +1,4 @@
+import Image from "next/image";
 function Banner() {
   return (
     <div className=" flex items-center flex-col lg:flex-row lg:space-x-5 justify-between font-bold

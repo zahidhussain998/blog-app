@@ -7,8 +7,18 @@ import Head from "next/head";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "netialap.com",
-  description: "Created by Zahid hussain",
+  title:{
+    default:"netialap.com",
+    template:"%s - netialap.com"
+
+  },
+  
+  description: "netiap.com is a world biggest website for reading and writing",
+  twitter: {
+    card: "summary_large_image",
+    site: "@netialap",
+  },
+
 };
 
 export default function RootLayout({

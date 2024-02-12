@@ -1,7 +1,7 @@
 // bg-[#0A7DFF]
 
 import Link from "next/link";
-
+import Image from "next/image";
 
 
 export default function FooterThree() {
@@ -12,7 +12,7 @@ export default function FooterThree() {
           <div className="w-auto p-8">
             <a href="#">
               <div className="inline-flex items-center">
-               <img
+               <Image
                 src="/n.png"
                 alt="logo"
                 width={60}
