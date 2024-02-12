@@ -4,8 +4,9 @@ import Banner from "components/Banner";
 import Footer from "components/Footer";
 import Providers from "components/Providers";
 import Head from "next/head";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "netialap.com",
   description: "Created by Zahid hussain",
 };
@@ -15,18 +16,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  <Head>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{metadata.title}</title>
-  <meta name="description" content={metadata.description} />
-  {/* Add other head elements as needed */}
-</Head>
   return (
     <html lang="en">
       <body>
-     
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>
             <div className="bg-primary w-full overflow-hidden">
@@ -34,13 +26,12 @@ export default function RootLayout({
                 <div className={`xl:max-w-[1280px] w-full`}>
                   <link rel="icon" href="/n.png" />
                   <Header />
-                  <hr className="border-[#0A7DFF]"/>
-                   {/* <div className="mt-5"> */}
+                  <hr className="border-[#0A7DFF]" />
+                  {/* <div className="mt-5"> */}
                   <Banner />
 
-                   {/* </div> */}
-                  <div className="relative min-h-screen">{children}
-                  </div>
+                  {/* </div> */}
+                  <div className="relative min-h-screen">{children}</div>
                   <div className="position-fixed ">
                     <div className="relative flex overflow-x-hidden  mb-5 rounded-md">
                       <div className="py-12 animate-marquee whitespace-nowrap ">

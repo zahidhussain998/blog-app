@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next";
 import { getServerSideSitemap, ISitemapField } from "next-sitemap";
+import "../../styles/globals.css";
 
 
 type Post = {
