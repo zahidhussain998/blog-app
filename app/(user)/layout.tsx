@@ -37,15 +37,14 @@ export default function RootLayout({
                   <hr className="border-[#0A7DFF]"/>
                    {/* <div className="mt-5"> */}
                   <Banner />
-                  <hr className="border-[#0A7DFF]"/>
 
                    {/* </div> */}
                   <div className="relative min-h-screen">{children}
                   </div>
-                  <div className="position-fixed">
+                  <div className="position-fixed ">
                     <div className="relative flex overflow-x-hidden  mb-5 rounded-md">
                       <div className="py-12 animate-marquee whitespace-nowrap ">
-                        <span className="inline-block mx-8">
+                        <span className="inline-block mx-8 text-black">
                           Sponser Website
                         </span>
                         <span className="inline-block mx-8">Sponsor Email</span>
