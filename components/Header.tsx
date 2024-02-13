@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="max-w-7xl mx-auto flex justify-between p-5">
+    <header className="max-w-7xl mx-auto flex justify-between p-5 border border-[#0A7DFF] rounded-full mt-2">
       <div className="flex items-center">
         <Link href="/">
           <Image
