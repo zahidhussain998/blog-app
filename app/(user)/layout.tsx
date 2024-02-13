@@ -36,7 +36,6 @@ export default function RootLayout({
                 <div className={`xl:max-w-[1280px] w-full`}>
                   <link rel="icon" href="/n.png" />
                   <Header />
-                  <hr className="border-[#0A7DFF]" />
                   {/* <div className="mt-5"> */}
                   <Banner />
 
