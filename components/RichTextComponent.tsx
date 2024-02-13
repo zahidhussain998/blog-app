@@ -7,14 +7,15 @@ import Link from 'next/link';
 export const RichTextComponent = {
   types: {
     image: ({ value }: any) => (
-      <div className="relative w-full h-96 m-10 mx-auto">
-        <Image
-          className="object-contain"
-          src={urlFor(value).url()}
-          alt="Blog Post Image"
-          fill
-        />
-      </div>
+      <div className="relative w-full h-0 pb-96">
+      <Image
+        className="object-cover object-center"
+        src={urlFor(value).url()}
+        alt="Blog Post Image"
+        fill
+        style={{ objectFit: "cover" }}
+      />
+    </div>
     ),
   },
    

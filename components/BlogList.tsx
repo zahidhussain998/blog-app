@@ -19,7 +19,6 @@ function BlogList({ posts }: Props) {
     const [visiblePosts, setVisiblePosts] = useState(6); // State for visible posts
     const [searchQuery, setSearchQuery] = useState<string>(''); // State for search query
 
-
     // Filter posts based on search query
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -28,6 +27,7 @@ function BlogList({ posts }: Props) {
     const loadMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 6);
   };
+
 
 
   return (
@@ -135,6 +135,10 @@ function BlogList({ posts }: Props) {
       </svg>
     </button>
   )}
+</div>
+
+<div>
+
 </div>
 
     </div>

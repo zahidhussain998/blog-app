@@ -25,7 +25,7 @@ const Sponsor: React.FC = () => {
       <section className="mb-8 mt-10">
         <h3 className="text-6xl mb-10">Options</h3>
 
-        <div className="mb-4 bg-[#A7DFFA]">
+        <div className="mb-4">
           <h4 className="text-3xl mb-7">Site sponsor · $200</h4>
           <p className='mt-5 mb-10'>
             Your product or resource will be shown in a fixed position on the homepage and all other major feeds. It will also be repeated through the grid as you scroll.

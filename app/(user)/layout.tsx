@@ -36,7 +36,6 @@ export default function RootLayout({
                 <div className={`xl:max-w-[1280px] w-full`}>
                   <link rel="icon" href="/n.png" />
                   <Header />
-                  <hr className="border-[#0A7DFF]" />
                   {/* <div className="mt-5"> */}
                   <Banner />
 
@@ -45,7 +44,7 @@ export default function RootLayout({
                   <div className="position-fixed ">
                     <div className="relative flex overflow-x-hidden  mb-5 rounded-md">
                       <div className="py-12 animate-marquee whitespace-nowrap ">
-                        <span className="inline-block mx-8 text-black">
+                        <span className="inline-block mx-8">
                           Sponser Website
                         </span>
                         <span className="inline-block mx-8">Sponsor Email</span>
