@@ -1,9 +1,12 @@
+"use client";
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
 import PreviewSuspense from "../../components/PreviewSuspense";
 import PreviewBlogList from "../../components/PreviewBlogList";
 import BlogList from "../../components/BlogList";
 // import { ScatterBoxLoader } from "react-awesome-loaders";
+
+import { Rings } from 'react-loader-spinner'
 
 
 
@@ -25,15 +28,17 @@ export default async function HomePage() {
     return (
       <PreviewSuspense
         fallback={
-          <div className="my-40 flex">
-          <div className="relative mx-auto h-10 w-10">
-            <div className="relative mx-auto ms-5 h-24 w-24 animate-bounce rounded-full border-2">
-              <div className="absolute bottom-0 right-10">
-                <div className="relative h-40 animate-bounce">
-                  <div className="absolute bottom-0 right-0 h-2 w-2 rounded-full bg-[#0A7DFF]"></div>
-                </div>
-              </div>
-            </div>
+          <div className=" flex">
+          <div className="relative mx-auto">
+          <Rings
+            visible={true}
+            height="80"
+            width="80"
+            color="#0A7DFF"
+            ariaLabel="rings-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            />
           </div>
         </div>
         }
