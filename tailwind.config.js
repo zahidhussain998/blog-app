@@ -8,6 +8,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    fontFamily: {
+      sans: ['"Montserrat"', 'sans-serif'],
+    },
     extend: {
       animation: {
         marquee: 'marquee 25s linear infinite',

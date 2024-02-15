@@ -42,7 +42,7 @@ export default function RootLayout({
                   {/* </div> */}
                   <div className="relative min-h-screen">{children}</div>
                   <div className="position-fixed ">
-                    <div className="relative flex overflow-x-hidden  mb-5 rounded-md">
+                    <div className="relative flex overflow-x-hidden  mb-5 rounded-md font-Oswald">
                       <div className="py-12 animate-marquee whitespace-nowrap ">
                         <span className="inline-block mx-8">
                           Sponser Website
