@@ -21,6 +21,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/ui": "^1.9.3",
     "@sanity/vision": "^3.0.0",
+    "@sendgrid/mail": "^8.1.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "18.15.10",
     "clsx": "^2.1.0",

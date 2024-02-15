@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 
 function PostContent({ body }: { body: any }) {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-5xl mx-auto">
       <PortableText value={body} components={RichTextComponent} />
     </div>
   );
@@ -54,14 +54,14 @@ async function Post({ params: { slug } }: Props) {
         <div className="relative min-h-72 md:min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
-              className="object-cover object-center mx-auto"
+              className="object-cover object-center mx-auto "
               src={urlFor(post.mainImage).url()}
               alt={post.author.name}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <section className="p-4 md:p-5 w-full ">
+          <section className="p-4 md:p-5 w-full bg-[#0A7DFF]">
             <div className="flex flex-col md:flex-row justify-between gap-y-4 md:gap-y-5">
               <div>
                 <h1 className="text-3xl md:text-4xl font-extrabold">{post.title}</h1>
@@ -98,7 +98,7 @@ async function Post({ params: { slug } }: Props) {
                    
             {post.categories?.map((category) => (
                   
-                  <p key={category._id} className="text-xs bg-[#0A7DFF] text-white px-2 py-1 rounded-full">
+                  <p key={category._id} className="text-xs bg-black text-white px-2 py-1 rounded-full">
                     {category.title}
                   </p>
                 ))}
@@ -106,7 +106,7 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <PostContent body={post.body} />
       </div>
     </article>

@@ -11,6 +11,8 @@ function Banner() {
           </span>
            {""}
            Uncover a wealth of stories and knowledge with us        </h2>
+
+          
       </div>
         <img
           src="/n.png"
