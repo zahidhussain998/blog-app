@@ -6,17 +6,24 @@ import Link from 'next/link';
 
 export const RichTextComponent = {
   types: {
-    image: ({ value }: any) => (
-      <div className="relative w-full h-0 pb-96">
-      <Image
-        className="object-cover object-center"
-        src={urlFor(value).url()}
-        alt="Blog Post Image"
-        fill
-        style={{ objectFit: "cover" }}
-      />
-    </div>
-    ),
+    image: ({ value }: any) => {
+      const imageWidth = value?.metadata?.width || 600; // Set a default value for width
+      const imageHeight = value?.metadata?.height || 400; // Set a default value for height
+
+      return (
+        <div className="relative w-full">
+          <Image
+            className="object-cover object-center"
+            src={urlFor(value).url()}
+            alt="Blog Post Image"
+            width={imageWidth}
+            height={imageHeight}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+      );
+    },
   },
    
   list: {

@@ -58,6 +58,7 @@ async function Post({ params: { slug } }: Props) {
               src={urlFor(post.mainImage).url()}
               alt={post.author.name}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <section className="p-4 md:p-5 w-full ">
@@ -93,7 +94,7 @@ async function Post({ params: { slug } }: Props) {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+            <div className="flex flex-wrap md:flex-row gap-y-2 md:gap-x-2 items-center">
                    
             {post.categories?.map((category) => (
                   
