@@ -15,8 +15,8 @@ class MyDocument extends Document {
       <Html lang="en">
            <Head>
            <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>My Website Title</title>
-        <meta name="description" content="This is an example description" />
+        <title>Netialap.com</title>
+        <meta name="description" content=" Netiap.com is a world biggest website for reading and writing " />
         <link rel="icon" href="/n.png" />
         </Head>
         <body>
