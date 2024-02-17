@@ -6,19 +6,17 @@ import Providers from "components/Providers";
 import Head from "next/head";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title:{
-    default:"netialap.com",
-    template:"%s - netialap.com"
 
+export const metadata: Metadata = {
+  title: {
+    default: "netialap.com",
+    template: "%s - netialap.com",
   },
-  
   description: "netiap.com is a world biggest website for reading and writing",
   twitter: {
     card: "summary_large_image",
     site: "@netialap",
   },
-
 };
 
 export default function RootLayout({
@@ -29,10 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>My Website Title</title>
-          <meta name="description" content="This is an example description" />
-        </Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Netialap.com</title>
+        <meta
+          name="description"
+          content="Netiap.com is a world biggest website for reading and writing"
+        />
+        <link rel="icon" href="/n.png" />
+      </Head>
       <body>
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>
