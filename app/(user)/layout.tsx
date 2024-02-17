@@ -28,6 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>My Website Title</title>
+          <meta name="description" content="This is an example description" />
+        </Head>
       <body>
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>

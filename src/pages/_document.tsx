@@ -14,6 +14,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
            <Head>
+           <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My Website Title</title>
+        <meta name="description" content="This is an example description" />
         <link rel="icon" href="/n.png" />
         </Head>
         <body>

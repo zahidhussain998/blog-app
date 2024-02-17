@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 
 function PostContent({ body }: { body: any }) {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-2xl mx-auto">
       <PortableText value={body} components={RichTextComponent} />
     </div>
   );
