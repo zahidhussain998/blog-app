@@ -9,7 +9,7 @@ function onPublicAccessOnly() {
 }
 
 if (!projectId || !dataset) {
-    throw new Error('Missing projectId or dataset. Check your sanity.json or .env');
+    console.log('Sanity environment variables are not set.');  // Log a message
 }
 
 
