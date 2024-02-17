@@ -26,15 +26,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+
+<Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Netialap.com</title>
-        <meta
-          name="description"
-          content="Netiap.com is a world biggest website for reading and writing"
-        />
+        <title>netialap.com</title>
+        <meta name="description" content="netiap.com is a world biggest website for reading and writing" />
         <link rel="icon" href="/n.png" />
       </Head>
+     
       <body>
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>
