@@ -1,8 +1,8 @@
-# Radiant Pulse Blog Website
+# Netialap.com Pulse Blog Website
 
-Welcome to the Radiant Pulse Blog Website repository. This website is designed to share insightful blog posts and articles on various topics. If you're a contributor, this README will guide you through the setup and usage of the project.
+Welcome to the Netialap.com Pulse Blog Website repository. This website is designed to share insightful blog posts and articles on various topics. If you're a contributor, this README will guide you through the setup and usage of the project.
 
-![Radiant Pulse Blog Website Screenshot]
+![Netialap.com Pulse Blog Website Screenshot]
 
 ![Screenshot from 2023-12-30 20-42-10](https://github.com/zahidhussain998/Blog-app/assets/100913055/457e3093-1c46-43d4-bcf4-d10713aed727)
 
@@ -39,11 +39,11 @@ Make sure you have the following tools installed:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/radiant-pulse-blog-website.git
+git clone https://github.com/yourusername/Netialap.com-pulse-blog-website.git
 
 Change to the project directory:bash
 
-cd radiant-pulse-blog-website
+cd Netialap.com-pulse-blog-website
 
 Install project dependencies:bash
 

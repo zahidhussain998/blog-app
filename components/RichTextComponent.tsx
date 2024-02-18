@@ -54,6 +54,8 @@ export const RichTextComponent = {
       </blockquote>
     ),
 
+ 
+
   },
   marks: {
     link: ({ children, value }: any) => {

@@ -6,16 +6,16 @@ import Providers from "components/Providers";
 import Head from "next/head";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.netialap.com'),
   title: {
-    default: "netialap.com",
-    template: "%s - netialap.com",
+    default: 'netialap.com',
+    template: '%s - netialap.com',
   },
-  description: "netiap.com is a world biggest website for reading and writing",
+  description: 'netiap.com is a world biggest website for reading and writing',
   twitter: {
-    card: "summary_large_image",
-    site: "@netialap",
+    card: 'summary_large_image',
+    site: '@netialap',
   },
 };
 
@@ -26,14 +26,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
-<Head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>netialap.com</title>
-        <meta name="description" content="netiap.com is a world biggest website for reading and writing" />
+        <meta
+          name="description"
+          content="netiap.com is a world biggest website for reading and writing"
+        />
         <link rel="icon" href="/n.png" />
       </Head>
-     
+
       <body>
         <div className="max-w-7xl mx-auto scroll-smooth">
           <Providers>
@@ -96,7 +98,6 @@ export default function RootLayout({
             </div>
           </Providers>
         </div>
-        {/* <h1>hi zahid you are the best</h1> */}
       </body>
     </html>
   );

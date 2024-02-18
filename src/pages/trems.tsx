@@ -19,7 +19,7 @@ function terms() {
 
         <div className="text-lg mb-8">
           <p>
-            By accessing Radiant Pulse, you agree to be bound by these Terms and
+            By accessing Netialap.com, you agree to be bound by these Terms and
             Conditions of Use, all applicable laws and regulations, and agree
             that you are responsible for compliance with any applicable local
             laws. If you do not agree with any of these terms, you are
@@ -34,7 +34,7 @@ function terms() {
 
           <p>
             Permission is granted to temporarily download one copy of the
-            materials (information or software) on Radiant Pulse for personal,
+            materials (information or software) on Netialap.com for personal,
             non-commercial transitory viewing only. This is the grant of a
             license, not a transfer of title, and under this license you may
             not:
@@ -48,7 +48,7 @@ function terms() {
             </li>
             <li>
               attempt to decompile or reverse engineer any software contained on
-              Radiant Pulse;
+              Netialap.com;
             </li>
             <li>
               remove any copyright or other proprietary notations from the
@@ -62,7 +62,7 @@ function terms() {
 
           <p>
             This license shall automatically terminate if you violate any of
-            these restrictions and may be terminated by Radiant Pulse at any
+            these restrictions and may be terminated by Netialap.com at any
             time. Upon terminating your viewing of these materials or upon the
             termination of this license, you must destroy any downloaded
             materials in your possession whether in electronic or printed
@@ -74,12 +74,12 @@ function terms() {
           <h2 className="text-2xl font-bold mb-4">Disclaimer</h2>
 
           <p>
-            The materials on Radiant Pulse are provided as is. Radiant Pulse
+            The materials on Netialap.com  are provided as is. Netialap.com Pulse
             makes no warranties, expressed or implied, and hereby disclaims and
             negates all other warranties, including without limitation, implied
             warranties or conditions of merchantability, fitness for a
             particular purpose, or non-infringement of intellectual property or
-            other violation of rights. Further, Radiant Pulse does not warrant
+            other violation of rights. Further, Netialap.com does not warrant
             or make any representations concerning the accuracy, likely results,
             or reliability of the use of the materials on its website or
             otherwise relating to such materials or on any sites linked to this
@@ -91,11 +91,11 @@ function terms() {
           <h2 className="text-2xl font-bold mb-4">Limitations</h2>
 
           <p>
-            In no event shall Radiant Pulse or its suppliers be liable for any
+            In no event shall Netialap.com  or its suppliers be liable for any
             damages (including, without limitation, damages for loss of data or
             profit, or due to business interruption) arising out of the use or
-            inability to use the materials on Radiant Pulse, even if Radiant
-            Pulse or a Radiant Pulse authorized representative has been notified
+            inability to use the materials on Netialap.com , even if Netialap.com
+            Pulse or a Netialap.com Pulse authorized representative has been notified
             orally or in writing of the possibility of such damage. Because some
             jurisdictions do not allow limitations on implied warranties, or
             limitations of liability for consequential or incidental damages,
