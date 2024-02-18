@@ -1,3 +1,4 @@
+"use client"
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
 import PreviewSuspense from "../../components/PreviewSuspense";
