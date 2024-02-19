@@ -2,11 +2,6 @@ import React from 'react';
 import "../../styles/globals.css";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: "netialap.com",
- 
-
-};
 
 
 const AboutPage = () => {

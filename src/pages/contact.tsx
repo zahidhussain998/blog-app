@@ -14,11 +14,7 @@ type Inputs = {
 };
 
 
-export const metadata: Metadata = {
-  title: "Contact Us",
- 
 
-};
 
 type Props = {};
 

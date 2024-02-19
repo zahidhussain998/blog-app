@@ -5,11 +5,6 @@ import { Metadata } from "next";
 
 
 
-export const metadata: Metadata = {
-  title: "privacy policy - netiap.com",
- 
-
-};
 function privacy() {
   return (
     <div className="max-w-5xl mx-auto flex items-center justify-center shadow-full">
