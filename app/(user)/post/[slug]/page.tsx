@@ -13,14 +13,13 @@ type Props = {
   };
 };
 
-export const generateMetadata = generateMetaTags;
-
-export async function generateMetaTags({ params }: Props):Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const query = groq`
     *[_type == "post" && slug.current == $slug][0] {
       title,
       description,
-      main
+      mainImage,
+      _createdAt
     }
   `;
   const post = await client.fetch(query, params);
@@ -28,12 +27,18 @@ export async function generateMetaTags({ params }: Props):Promise<Metadata> {
   return {
     title: post.title,
     description: post.description,
-    alternates:{
-       canonical:`post/${params.slug}`,
-       languages: {
-         "en-CA":`en-CA/post/${params.slug}`,
-   
-       }
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: urlFor(post.mainImage).url(),
+          width: 800,
+          height: 600,
+          alt: post.title,
+        },
+      ],
+      publishedTime: new Date(post._createdAt).toISOString(),
     },
   };
 }
