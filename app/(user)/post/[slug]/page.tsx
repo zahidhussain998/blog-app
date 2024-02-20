@@ -59,7 +59,7 @@ export async function generateStaticParams() {
 function PostContent({ body }: { body: any }) {
   return (
     <div className="flex justify-center items-start">
-      <div className="flex max-w-2xl items-start ">
+      <div className="flex max-w-2xl items-start  sticky top-0">
         <div className="hide-on-mobile">
           <Card />
         </div>

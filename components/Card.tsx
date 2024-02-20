@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const Card = () => {
   return (
-    <div className="justify-start items-start hidden px-4 lg:block lg:w-1/5">
+    <div className="flex justify-start items-start  ">
 
-<div className="bg-white shadow-full rounded-md p-6 sticky h-20">
-  <div className="relative mb-4 hidden h-[250px] delay-lg border border-[0A7DFF] ">
+<div className="bg-white shadow-full rounded-md p-6 ">
+  <div className="relative mb-4 ">
       <span className="text-gray-500 ">Promoted</span>
       <hr/>
       <img
