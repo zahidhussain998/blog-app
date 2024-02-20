@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export default function FooterThree() {
   return (
-    <section className="relative overflow-hidden bg-black border border-blue-500 py-8">
+    <section className="relative overflow-hidden bg-black py-8">
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
             <a href="#">
               <div className="inline-flex items-center">
                <Image
-                src="/n.png"
+                src="/sh.png"
                 alt="logo"
                 width={60}
                 height={60}

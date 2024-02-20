@@ -5,12 +5,39 @@ import urlFor from "../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponent } from "../../../../components/RichTextComponent";
 import Card from "components/Card";
+import { Metadata } from "next";
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export const generateMetadata = generateMetaTags;
+
+export async function generateMetaTags({ params }: Props):Promise<Metadata> {
+  const query = groq`
+    *[_type == "post" && slug.current == $slug][0] {
+      title,
+      description,
+      main
+    }
+  `;
+  const post = await client.fetch(query, params);
+
+  return {
+    title: post.title,
+    description: post.description,
+    alternates:{
+       canonical:`post/${params.slug}`,
+       languages: {
+         "en-CA":`en-CA/post/${params.slug}`,
+   
+       }
+    },
+  };
+}
+
 
 export const revalidate = 20;
 
@@ -22,7 +49,7 @@ export async function generateStaticParams() {
   const slug: Post[] = await client.fetch(query);
   const slugRoutes = slug.map((slug) => slug.slug.current);
 
-  console.log('Generated slug routes:', slugRoutes);
+  console.log("Generated slug routes:", slugRoutes);
 
   return slugRoutes.map((slug) => ({
     slug,
@@ -31,21 +58,21 @@ export async function generateStaticParams() {
 
 function PostContent({ body }: { body: any }) {
   return (
-<div className="flex justify-between items-baseline ">
-  <div className="flex flex-col max-w-2xl sticky top-10 items-start">
-    <div className="hide-on-mobile mt-10">
-      {/* <Card /> */}
+    <div className="flex justify-center items-start">
+      <div className="flex max-w-2xl items-start ">
+        <div className="hide-on-mobile">
+          <Card />
+        </div>
+      </div>
+      <div className="max-w-2xl mt-5 md:mt-0 md:ml-5 md:mr-5">
+        <PortableText value={body} components={RichTextComponent} />
+      </div>
+      <div className="flex flex-col max-w-2xl items-start sticky top-0">
+        <div className="hide-on-mobile">
+          <Card />
+        </div>
+      </div>
     </div>
-  </div>
-  <div className="max-w-2xl mt-5 md:mt-0 md:ml-5 md:mr-5">
-    <PortableText value={body} components={RichTextComponent} />
-  </div>
-  <div className="flex flex-col items-center max-w-2xl">
-    <div className="hide-on-mobile mt-10">
-      {/* <Card /> */}
-    </div>
-  </div>
-</div>
   );
 }
 
@@ -134,3 +161,4 @@ async function Post({ params: { slug } }: Props) {
 }
 
 export default Post;
+

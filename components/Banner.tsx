@@ -10,14 +10,16 @@ function Banner() {
           Netialap {""}
           </span>
            {""}
-           Uncover a wealth of stories and knowledge with us        </h2>
+           Uncover a wealth of stories and knowledge with us    
+           
+               </h2>
 
           
       </div>
         <img
-          src="/n.png"
+                  src="/sh.png"
           alt="banner"
-          className="hidden md:inline-flex h-60 w-60 lg:h-full "
+          className="hidden md:inline-flex h-80 w-80 lg:h-full "
         />
 
     </div>

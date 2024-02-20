@@ -10,13 +10,17 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.netialap.com'),
   title: {
     default: 'netialap.com',
-    template: '%s - netialap.com',
+    template: `%s | netialap.com`,
   },
   description: 'netiap.com is a world biggest website for reading and writing',
   twitter: {
     card: 'summary_large_image',
     site: '@netialap',
   },
+  verification:{
+    google:"google-site-verification48928932458",
+
+  }
 };
 
 export default function RootLayout({
@@ -33,7 +37,7 @@ export default function RootLayout({
           name="description"
           content="netiap.com is a world biggest website for reading and writing"
         />
-        <link rel="icon" href="/n.png" />
+        <link rel="icon" href="/sh.png" />
       </Head>
 
       <body>
@@ -42,7 +46,7 @@ export default function RootLayout({
             <div className="bg-primary w-full overflow-hidden">
               <div className={`sm:px-16 px-6 flex justify-center items-center`}>
                 <div className={`xl:max-w-[1280px] w-full`}>
-                  <link rel="icon" href="/n.png" />
+                  <link rel="icon" href="/sh.png" />
                   <Header />
                   {/* <div className="mt-5"> */}
                   <Banner />

@@ -11,6 +11,10 @@ type SanityPost = {
   };
 };
 
+
+
+
+
 type SanityResponse = SanityPost[];
 
 const sanityClient = createClient({

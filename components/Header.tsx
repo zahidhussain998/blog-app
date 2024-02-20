@@ -19,13 +19,13 @@ export default function Header() {
   return (
     <header className="max-w-7xl mx-auto">
       <div className="flex justify-between p-5 border border-[#0A7DFF] rounded-full mt-2">
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
           <Link href="/">
             <Image
-              src="/n.png"
+              src="/sh.png"
               alt="logo"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               className="cursor-pointer"
             />
           </Link>
