@@ -1,18 +1,23 @@
-/** @type {import('next-sitemap').IConfig} */
-
-const siteUrl = 'https://www.netialap.com'
-
+const siteUrl = 'https://www.netialap.com';
 
 module.exports = {
-    siteUrl,
-    robotsTxtOptions:{
-        policies: [
-            {
-                userAgent: '*',
-                allow: '/',
-            },
-        ],
+  siteUrl,
+  generateRobotsTxt: true,
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+  },
+  dynamicRoutes: async () => {
+    const posts = await fetchPosts(); // Replace with your logic to fetch post data
 
-    },
-    generateRobotsTxt: true,
-}
+    return posts.map((post) => ({
+      url: `/post/${post.slug}`,
+      changefreq: 'daily',
+      priority: 0.7,
+    }));
+  },
+};
