@@ -16,7 +16,7 @@ const Card = () => {
           <h2 className="text-xl font-semibold mb-2 text-black">
             100% trusted freelancer
           </h2>
-          <Link href="https://www.fiverr.com/zohaibzohaibhus?up_rollout=true">
+          <Link href="https://www.fiverr.com/zohaibzohaibhus?public_mode=true">
             <p className="text-black text-sm outline-slate-800">
               zahid hussain is an website developer 100% trustable freelancer
             </p>
