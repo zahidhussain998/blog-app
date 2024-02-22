@@ -1,3 +1,5 @@
+/** @type {import('next-sitemap').IConfig} */
+
 const siteUrl = 'https://www.netialap.com'
 
 
