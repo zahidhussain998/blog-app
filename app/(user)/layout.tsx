@@ -41,7 +41,7 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <div className="max-w-7xl mx-auto scroll-smooth">
+        <div className="max-w-7xl mx-auto">
           <Providers>
             <div className="bg-primary w-full overflow-hidden">
               <div className={`sm:px-16 px-6 flex justify-center items-center`}>

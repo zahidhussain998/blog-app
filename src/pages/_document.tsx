@@ -14,12 +14,15 @@ class MyDocument extends Document {
     return (
       <html lang="en">
            <Head>
+            
            <meta name="viewport" content="width=device-width, initial-scale=1" />
            <title>Netialap.com</title>
            <meta name="description" content="Netiap.com is a world biggest website for reading and writing " />
            <link rel="icon" href="/sh.png" />
+           
         </Head>
         <body>
+          
           <Providers>
             <div className="max-w-7xl mx-auto">
               <div className="bg-primary w-full overflow-hidden">
