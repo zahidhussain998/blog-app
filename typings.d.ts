@@ -16,7 +16,7 @@ interface Post extends Base {
     slug: Slug;
     title: string;
     description: string;
-    tags: string[]; 
+   
 }
 
 

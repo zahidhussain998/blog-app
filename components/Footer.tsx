@@ -41,15 +41,15 @@ export default function FooterThree() {
                 </Link>
               </li>
            <li className="p-5">
-              <Link href="/about" className="font-medium text-white hover:text-gray-700">
-            <h3>About </h3>
+              <Link className="font-medium text-white hover:text-gray-700" href="/about">
+            About 
           </Link>
 
            </li>
 
            <li className="p-5">
-              <Link href="/sponser" className="font-medium text-white hover:text-gray-700">
-            <h3>Sponsor </h3>
+              <Link  className="font-medium text-white hover:text-gray-700" href="/sponser">
+            Sponsor 
           </Link>
 
           </li>
@@ -62,7 +62,7 @@ export default function FooterThree() {
           <div className="w-auto p-8">
             <div className="-m-1.5 flex flex-wrap">
               <div className="w-auto p-1.5">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100070209361267">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
                     <svg
                       width="8"
@@ -79,7 +79,7 @@ export default function FooterThree() {
                   </div>
                 </a>
               </div>
-              <div className="w-auto p-1.5">
+              {/* <div className="w-auto p-1.5">
                 <a href="#">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
                     <svg
@@ -96,9 +96,9 @@ export default function FooterThree() {
                     </svg>
                   </div>
                 </a>
-              </div>
+              </div> */}
               <div className="w-auto p-1.5">
-                <a href="#">
+                <a href="https://www.instagram.com/netialap.com_/">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-black hover:border-gray-400">
                     <svg
                       width="16"
