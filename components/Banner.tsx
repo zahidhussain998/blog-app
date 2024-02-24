@@ -6,7 +6,7 @@ function Banner() {
       <div className="">
         <h2 className="text-7xl "> Stay inquisitive </h2>
     <h2 className="ml-2 md:mt-3 ">welcome to {""}
-          <span className=" underline decoration-4 decoration-[#wndkosaldk]">
+          <span className=" underline decoration-4 decoration-[#0A7DFF]">
           Netialap {""}
           </span>
            {""}

@@ -5,6 +5,15 @@ import Footer from "components/Footer";
 import Providers from "components/Providers";
 import Head from "next/head";
 import { Metadata } from "next";
+import {Montserrat} from '@next/font/google';
+import { Roboto } from "@next/font/google";
+
+const montserrat = Roboto({
+  subsets:['latin'],
+  weight:['400', '700'],
+})
+
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.netialap.com'),
@@ -39,8 +48,9 @@ export default function RootLayout({
         />
         <link rel="icon" href="/sh.png" />
       </Head>
-
-      <body>
+      
+      <body className={montserrat.className}>
+        
         <div className="max-w-7xl mx-auto">
           <Providers>
             <div className="bg-primary w-full overflow-hidden">
@@ -52,7 +62,10 @@ export default function RootLayout({
                   <Banner />
 
                   {/* </div> */}
-                  <div className="relative min-h-screen">{children}</div>
+                  <div className="relative min-h-screen ">
+                    {children}
+                    
+                    </div>
                   <div className="position-fixed ">
                     <div className="relative flex overflow-x-hidden  mb-5 rounded-md font-Oswald">
                       <div className="py-12 animate-marquee whitespace-nowrap ">
