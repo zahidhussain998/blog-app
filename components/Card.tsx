@@ -9,15 +9,16 @@ const Card = () => {
           <span className="text-gray-500">Promoted</span>
           <hr />
           <img
-            className="h-30 w-20"
+            className="h-30 w-20 object-cover"
             src="https://res.cloudinary.com/jerrick/image/upload/v1691336585/64cfbf898dc3fa001d604dc0.png"
             alt="image"
+            
           />
           <h2 className="text-xl font-semibold mb-2 text-black">
             100% trusted freelancer
           </h2>
           <Link href="https://www.fiverr.com/zohaibzohaibhus?public_mode=true">
-            <p className="text-black text-sm outline-slate-800">
+            <p className="text-black text-sm outline-slate-800 underline-[#0A7DFF]">
               zahid hussain is an website developer 100% trustable freelancer
             </p>
           </Link>

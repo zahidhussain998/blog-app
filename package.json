@@ -50,6 +50,7 @@
     "react-youtube": "^9.0.3",
     "sanity": "^3.16.7",
     "sanity-plugin-iframe-pane": "^2.3.0",
+    "stripe": "^14.18.0",
     "styled-components": "^5.2.0",
     "tailwind-merge": "^2.2.1",
     "three": "^0.158.0",
