@@ -16,7 +16,7 @@ interface Post extends Base {
     slug: Slug;
     title: string;
     description: string;
-   
+
 }
 
 
@@ -31,6 +31,18 @@ interface Author extends Base {
     mainImage: Image;
     title: string;
     description: string;
+    CodeBlock:CodeBlock;
+}
+
+interface CodeNode {
+    language?: string;
+    code?: string;
+    highlightedLines?: number[];
+  }
+
+  interface CodeBlock extends Block {
+    _type: "code";
+    codeNode: CodeNode;
 }
 
 interface Image {
@@ -54,6 +66,7 @@ interface Block {
     children:Span[];
     markDefs: any[];
     style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+ 
 }
 
 

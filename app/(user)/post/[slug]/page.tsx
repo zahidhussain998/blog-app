@@ -7,6 +7,7 @@ import { RichTextComponent } from "../../../../components/RichTextComponent";
 import Card from "components/Card";
 import { Metadata } from "next";
 
+
 type Props = {
   params: {
     slug: string;
@@ -61,16 +62,20 @@ export async function generateStaticParams() {
   }));
 }
 
+
+
 function PostContent({ body }: { body: any }) {
+  console.log("Body Content:", body); // Log the body content
+  
   return (
-    <div className="flex justify-center items-start">
+     <div className="flex justify-center items-start">
       <div className="flex max-w-2xl items-start  sticky top-0">
         <div className="hide-on-mobile">
           <Card />
         </div>
       </div>
       <div className="max-w-2xl mt-5 md:mt-0 md:ml-5 md:mr-5">
-        <PortableText value={body} components={RichTextComponent} />
+      <PortableText value={body} components={RichTextComponent} />
       </div>
       <div className="flex flex-col max-w-2xl items-start sticky top-0">
         <div className="hide-on-mobile">
@@ -86,7 +91,7 @@ async function Post({ params: { slug } }: Props) {
     *[_type == "post" && slug.current == $slug][0] {
        ...,
         author->,
-       categories[]->
+       categories[]->,
     }
   `;
 
@@ -159,11 +164,10 @@ async function Post({ params: { slug } }: Props) {
         <div className="max-w-7xl mx-auto "></div>
 
         <div></div>
-        <PostContent body={post.body} />
+        <PostContent body={post.body}  />
       </div>
     </article>
   );
 }
 
 export default Post;
-

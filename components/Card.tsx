@@ -3,7 +3,7 @@ import Link from "next/link";
 const Card = () => {
   return (
     
-    <div className="flex justify-start items-start">
+    <div className="flex justify-start items-start ">
       <div className="bg-white shadow-full rounded-md p-6 border-4 border-blue-500">
         <div className="relative mb-4">
           <span className="text-gray-500">Promoted</span>

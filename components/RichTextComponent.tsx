@@ -3,8 +3,29 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Image from 'next/image';
 import urlFor from '../lib/urlFor';
 import Link from 'next/link';
+import Refractor from 'react-refractor';
+import js from 'refractor/lang/javascript';
+import { AllHTMLAttributes } from 'react';
+
+import dynamic from 'next/dynamic';
+
+
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
+
+// interface PortableTextTypeComponentProps<T = any> extends AllHTMLAttributes<any> {
+//   node?: T;
+// }
+
+// Refractor.registerLanguage(js);
+
+// interface CodeNode {
+//   language?: string;
+//   code?: string;
+//   highlightedLines?: number[];
+// }
 
 export const RichTextComponent = {
+ 
   types: {
     image: ({ value }: any) => {
       const imageWidth = value?.metadata?.width || 600; // Set a default value for width
@@ -21,12 +42,34 @@ export const RichTextComponent = {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ width: '100%', height: 'auto' }}
           />
-          
         </div>
       );
     },
+    
+    youtube: ({ node }: any) => {
+      if (!node || typeof node !== 'object' || !node.url) {
+        return null;
+      }
+      const { url } = node;
+      return <ReactPlayer url={url} />;
+    },
+    // code: ({ node }: PortableTextTypeComponentProps<CodeNode>) => {
+    //   if (!node || typeof node !== 'object' || !node.code) {
+    //     return null;
+    //   }
+      
+    //   return (
+    //     <Refractor
+    //       language={node.language || 'javascript'}
+    //       value={node.code}
+    //       inline={false}
+    //     />
+    //   );
+    // },
+ 
+
+
   },
-   
   list: {
     bullet: ({ children }: any) => (
       <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
@@ -53,9 +96,6 @@ export const RichTextComponent = {
         {children}
       </blockquote>
     ),
-
- 
-
   },
   marks: {
     link: ({ children, value }: any) => {
@@ -75,6 +115,7 @@ export const RichTextComponent = {
       );
     },
   },
-
+  
+    // Define other types components here
+  
 };
-

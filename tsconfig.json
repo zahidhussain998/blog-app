@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@sanity/code-input"],
     "target": "ES6",
     "lib": [
       "dom",
@@ -37,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "next-sitemap.config.js"  ],
+, "next-sitemap.config.js", "schemas/youTubeType.ts", "schemas/YouTubePreview.tsx"  ],
   "exclude": [
     "node_modules"
   ]
