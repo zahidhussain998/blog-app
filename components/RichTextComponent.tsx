@@ -47,6 +47,7 @@ export const RichTextComponent = {
     },
     
     youtube: ({ node }: any) => {
+      
       if (!node || typeof node !== 'object' || !node.url) {
         return null;
       }
