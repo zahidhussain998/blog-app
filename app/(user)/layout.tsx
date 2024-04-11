@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8731247500470013"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>netialap.com</title>
         <meta
