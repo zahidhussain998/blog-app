@@ -40,17 +40,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>netialap.com</title>
-          <meta
-            name="description"
-            content="netiap.com is a world biggest website for reading and writing"
-          />
-          <link rel="icon" href="/sh.png" />
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8731247500470013"
-     crossOrigin="anonymous"></script>
-        </Head>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>netialap.com</title>
+        <meta
+          name="description"
+          content="netiap.com is a world biggest website for reading and writing"
+        />
+        <link rel="icon" href="/sh.png" />
+      </Head>
       
       <body className={montserrat.className}>
         
