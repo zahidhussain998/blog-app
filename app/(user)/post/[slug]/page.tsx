@@ -3,7 +3,7 @@ import { client } from "../../../../lib/sanity.client";
 import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
-import { RichTextComponent } from "../../../../components/RichTextComponent";
+import { serializers } from "../../../../components/RichTextComponent";
 import Card from "components/Card";
 import { Metadata } from "next";
 
@@ -70,14 +70,12 @@ function PostContent({ body }: { body: any }) {
   return (
      <div className="flex justify-center items-start">
       <div className="flex max-w-2xl items-start  sticky top-0">
-        <div className="hide-on-mobile">
-          <Card />
-        </div>
+       
       </div>
-      <div className="max-w-2xl mt-5 md:mt-0 md:ml-5 md:mr-5">
-      <PortableText value={body} components={RichTextComponent} />
+      <div className="max-w-5xl mt-5 md:mt-0 md:ml-5 md:mr-5">
+      <PortableText value={body} components={serializers}  />
       </div>
-      <div className="flex flex-col max-w-2xl items-start sticky top-0">
+      <div className="flex flex-col items-start sticky top-0 fixed">
         <div className="hide-on-mobile">
           <Card />
         </div>

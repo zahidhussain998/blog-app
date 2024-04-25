@@ -8,6 +8,7 @@ import js from 'refractor/lang/javascript';
 import { AllHTMLAttributes } from 'react';
 
 import dynamic from 'next/dynamic';
+import { PortableTextTypeComponentProps } from '@portabletext/react';
 
 
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
@@ -24,9 +25,29 @@ const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 //   highlightedLines?: number[];
 // }
 
-export const RichTextComponent = {
+type YoutubeNode = {
+  url: string;
+};
+
+export const serializers = {
  
   types: {
+    youtube: ({ value }: any) => {
+      // Log the value object to check its structure
+      console.log('YouTube Node:', value);
+
+      // Check if node is defined and contains the URL
+      if (value && value.url) {
+        return <ReactPlayer url={value.url} />;
+      } else if (value && value.data && value.data.url) {
+        // If URL is nested within a data object
+        return <ReactPlayer url={value.data.url} />;
+      } else {
+        // If URL is missing, render a message
+        return <p>No video URL provided</p>;
+      }
+    },
+
     image: ({ value }: any) => {
       const imageWidth = value?.metadata?.width || 600; // Set a default value for width
       const imageHeight = value?.metadata?.height || 400; // Set a default value for height
@@ -46,30 +67,8 @@ export const RichTextComponent = {
       );
     },
     
-    youtube: ({ node }: any) => {
-      
-      if (!node || typeof node !== 'object' || !node.url) {
-        return null;
-      }
-      const { url } = node;
-      return <ReactPlayer url={url} />;
-    },
-    // code: ({ node }: PortableTextTypeComponentProps<CodeNode>) => {
-    //   if (!node || typeof node !== 'object' || !node.code) {
-    //     return null;
-    //   }
-      
-    //   return (
-    //     <Refractor
-    //       language={node.language || 'javascript'}
-    //       value={node.code}
-    //       inline={false}
-    //     />
-    //   );
-    // },
- 
-
-
+    
+   
   },
   list: {
     bullet: ({ children }: any) => (
@@ -98,6 +97,7 @@ export const RichTextComponent = {
       </blockquote>
     ),
   },
+
   marks: {
     link: ({ children, value }: any) => {
       const rel =
@@ -116,7 +116,6 @@ export const RichTextComponent = {
       );
     },
   },
-  
     // Define other types components here
   
 };

@@ -1,4 +1,3 @@
-
 type Base = {
     _createdAt: string;
     _id: string;
@@ -7,47 +6,44 @@ type Base = {
     _type: string;
 }
 
-
 interface Post extends Base {
     author: Author;
     categories: Category[];
-    body: Block[];
+    body: Block[] | YoutubeEmbed;
     mainImage: Image;
     slug: Slug;
     title: string;
     description: string;
-
+    youtube: YoutubeEmbed;
 }
-
 
 interface Author extends Base {
     name: string;
     slug: Slug;
     image: Image;
     bio: Block[];
-    author: Author;
     categories: Category[];
     body: Block[];
     mainImage: Image;
     title: string;
     description: string;
-    CodeBlock:CodeBlock;
+    CodeBlock: CodeBlock;
 }
 
 interface CodeNode {
     language?: string;
     code?: string;
     highlightedLines?: number[];
-  }
+}
 
-  interface CodeBlock extends Block {
+interface CodeBlock extends Block {
     _type: "code";
     codeNode: CodeNode;
 }
 
 interface Image {
     _type: "image";
-    asset: "reference";
+    asset: Reference;
 }
 
 interface Slug {
@@ -63,12 +59,10 @@ interface Reference {
 interface Block {
     _type: "block";
     _key: string;
-    children:Span[];
+    children: Span[];
     markDefs: any[];
     style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
- 
 }
-
 
 interface Span {
     _type: "span";
@@ -82,14 +76,17 @@ interface Category extends Base {
     description: string;
 }
 
-
 interface MainImage {
     _type: "image";
     asset: Reference;
 }
 
-
 interface Title {
     _type: "string";
     current: string;
+}
+
+interface YoutubeEmbed {
+    _type: "youtube";
+    url: string;
 }
