@@ -52,6 +52,7 @@ export default function RootLayout({
      crossOrigin="anonymous"></script>
       </Head>
       
+      
       <body className={montserrat.className}>
         
         <div className="max-w-7xl mx-auto">
