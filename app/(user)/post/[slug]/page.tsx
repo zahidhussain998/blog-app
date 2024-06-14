@@ -68,19 +68,22 @@ function PostContent({ body }: { body: any }) {
   console.log("Body Content:", body); // Log the body content
   
   return (
-     <div className="flex justify-center items-start">
-      <div className="flex max-w-2xl items-start  sticky top-0">
-       
-      </div>
-      <div className="max-w-5xl mt-5 md:mt-0 md:ml-5 md:mr-5">
-      <PortableText value={body} components={serializers}  />
-      </div>
-      <div className="flex flex-col items-start sticky top-0 fixed">
-        <div className="hide-on-mobile">
-          <Card />
-        </div>
-      </div>
+    <div className="flex justify-center items-start p-5 space-x-5">
+    {/* Left Sidebar */}
+    <div className="flex flex-col items-start sticky top-0 hidden lg:flex">
+      <Card />
     </div>
+  
+    {/* Main Content */}
+    <div className="max-w-2xl w-full mt-5 md:mt-0">
+      <PortableText value={body} components={serializers} />
+    </div>
+  
+    {/* Right Sidebar */}
+    <div className="flex flex-col items-start sticky top-0 hidden lg:flex">
+      <Card />
+    </div>
+  </div>
   );
 }
 
