@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export",
+    "export": "next build && next export && create-ads-txt",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
@@ -33,6 +33,7 @@
     "framer-motion-3d": "^10.16.4",
     "get-youtube-id": "^1.0.1",
     "next": "^13.5.6",
+    "next-google-adsense": "^1.0.6",
     "next-sanity": "^4.1.6",
     "next-theme": "^0.1.5",
     "next-themes": "^0.2.1",
