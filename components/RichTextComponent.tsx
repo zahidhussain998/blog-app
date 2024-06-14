@@ -55,7 +55,7 @@ export const serializers = {
       return (
         <div className="relative w-full">
           <Image
-            className="object-cover object-center"
+            className="object-cover object-center rounded-lg"
             src={urlFor(value).url()}
             alt="Blog Post Image"
             width={imageWidth}
