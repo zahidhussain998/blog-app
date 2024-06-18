@@ -14,6 +14,10 @@ type Props = {
   };
 };
 
+
+
+
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const query = groq`
     *[_type == "post" && slug.current == $slug][0] {
@@ -68,22 +72,18 @@ function PostContent({ body }: { body: any }) {
   console.log("Body Content:", body); // Log the body content
   
   return (
-    <div className="flex justify-center items-start p-5 space-x-5">
-    {/* Left Sidebar */}
-    <div className="flex flex-col items-start sticky top-0 hidden lg:flex">
-      <Card />
-    </div>
-  
+    <div className="flex flex-col lg:flex-row max-w-5xl space-y-10 lg:space-y-0 lg:space-x-20">
     {/* Main Content */}
-    <div className="max-w-2xl w-full mt-5 md:mt-0">
+    <div className="max-w-3xl w-full mt-5 md:mt-0">
       <PortableText value={body} components={serializers} />
     </div>
-  
+
     {/* Right Sidebar */}
-    <div className="flex flex-col items-start sticky top-0 hidden lg:flex">
+    <div className="hidden lg:block lg:w-64 lg:sticky lg:top-10 ">
       <Card />
     </div>
   </div>
+
   );
 }
 
@@ -99,7 +99,7 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="">
+    <article className="tracking-normal  ">
       <div className="px-4 md:px-10 pb-20 max-w-7xl mx-auto">
         <section className="space-y-4 md:space-y-2 ">
           <div className="relative min-h-72 md:min-h-56 flex flex-col md:flex-row justify-between">

@@ -44,18 +44,18 @@ function BlogList({ posts }: Props) {
         />
       </div>
       <hr className="border-[#0A7DFF]"/>
-      <div className="grid grid-cols-1 sm:grid-cols-2 px-10 gap-10 gap-y-16 pb-24 mt-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 px-10 gap-10 gap-y-16 pb-24 mt-7 ">
         {/* post */}
         {filteredPosts.slice(0, visiblePosts).map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-            <div className="flex flex-col group cursor-pointer">
+            <div className="flex flex-col group cursor-pointer  rounded-lg">
               <div
                 className="relative w-full h-80 drop-shadow-xl group-hover:scale-105
             transition-transform duration-200
-             ease-out"
+             ease-out "
               >
                 <Image
-                  className="object-cover object-left lg:object-center h-10"
+                  className="object-cover object-left lg:object-center rounded-lg "
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
@@ -86,7 +86,7 @@ function BlogList({ posts }: Props) {
                 <p className="underline decoration-4.2 decoration-[#0A7DFF] text-lg font-bold">{post.title}</p>
                 <p className="line-clamp-2 mt-3 mr-10">{post.description}</p>
               </div>
-              <div className="flex items-center space-x-2 flex-wrap">
+              <div className="flex items-center space-x-5 flex-wrap">
                     <Image
                       className="rounded-full"
                       src={urlFor(post.author.image).url()}
@@ -106,12 +106,12 @@ function BlogList({ posts }: Props) {
                 </p>
                       </h3>
                       <div>{/* author a10 */}</div>
-                    </div>
                   </div>
-              <p className=" font-bold flex items-center group-hover:underline text-[#0A7DFF] mt-3">
+              <p className=" font-bold flex items-center group-hover:underline text-[#0A7DFF] mt-3 ">
                 Read Post
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </p>
+                    </div>
             </div>
           </ClientSideRoute>
         ))}

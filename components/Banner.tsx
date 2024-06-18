@@ -21,7 +21,7 @@ function Banner() {
           alt="banner"
           className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 hidden md:inline-flex h-80 w-80 lg:h-full "
         />
-
+   
     </div>
   );
 }

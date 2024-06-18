@@ -1,59 +1,30 @@
 import React from 'react';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Image from 'next/image';
 import urlFor from '../lib/urlFor';
 import Link from 'next/link';
-import Refractor from 'react-refractor';
-import js from 'refractor/lang/javascript';
-import { AllHTMLAttributes } from 'react';
-
 import dynamic from 'next/dynamic';
 import { PortableTextTypeComponentProps } from '@portabletext/react';
 
-
-const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
-
-// interface PortableTextTypeComponentProps<T = any> extends AllHTMLAttributes<any> {
-//   node?: T;
-// }
-
-// Refractor.registerLanguage(js);
-
-// interface CodeNode {
-//   language?: string;
-//   code?: string;
-//   highlightedLines?: number[];
-// }
-
-type YoutubeNode = {
-  url: string;
-};
+// const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 export const serializers = {
- 
   types: {
-    youtube: ({ value }: any) => {
-      // Log the value object to check its structure
-      console.log('YouTube Node:', value);
-
-      // Check if node is defined and contains the URL
-      if (value && value.url) {
-        return <ReactPlayer url={value.url} />;
-      } else if (value && value.data && value.data.url) {
-        // If URL is nested within a data object
-        return <ReactPlayer url={value.data.url} />;
-      } else {
-        // If URL is missing, render a message
-        return <p>No video URL provided</p>;
-      }
-    },
+    // youtube: ({ value }: any) => {
+    //   if (value && value.url) {
+    //     return <ReactPlayer url={value.url} />;
+    //   } else if (value && value.data && value.data.url) {
+    //     return <ReactPlayer url={value.data.url} />;
+    //   } else {
+    //     return <p>No video URL provided</p>;
+    //   }
+    // },
 
     image: ({ value }: any) => {
-      const imageWidth = value?.metadata?.width || 600; // Set a default value for width
-      const imageHeight = value?.metadata?.height || 400; // Set a default value for height
+      const imageWidth = value?.metadata?.width || 600; // Default width
+      const imageHeight = value?.metadata?.height || 400; // Default height
 
       return (
-        <div className="relative w-full">
+        <div className="relative" style={{ maxWidth: '100%', maxHeight: '500px' }}>
           <Image
             className="object-cover object-center rounded-lg"
             src={urlFor(value).url()}
@@ -61,14 +32,11 @@ export const serializers = {
             width={imageWidth}
             height={imageHeight}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', maxHeight: '500px' }}
           />
         </div>
       );
     },
-    
-    
-   
   },
   list: {
     bullet: ({ children }: any) => (
@@ -116,6 +84,4 @@ export const serializers = {
       );
     },
   },
-    // Define other types components here
-  
 };
