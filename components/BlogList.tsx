@@ -17,7 +17,6 @@ export const revalidate = 20;
 
 function BlogList({ posts }: Props) {
     const [visiblePosts, setVisiblePosts] = useState(10); // State for visible posts
-    const [searchQuery, setSearchQuery] = useState<string>(''); // State for search query
 
     // Filter posts based on search query
   const filteredPosts = posts.filter((post) =>
@@ -34,15 +33,7 @@ function BlogList({ posts }: Props) {
     <div>
 
      
-      <div className="flex justify-center mt-10">
-      
-        <input
-          type="text"
-          placeholder="Search Posts"
-          className="w-full h-14 rounded-sm placeholder-gray-500 text-gray-500 outline-none bg-transparent dark:text-orange-400 flex-1"
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
+    
       <hr className="border-[#0A7DFF]"/>
       <div className="grid grid-cols-1 sm:grid-cols-2 px-10 gap-10 gap-y-16 pb-24 mt-7 ">
         {/* post */}
