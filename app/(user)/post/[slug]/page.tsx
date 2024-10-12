@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           width: 800,
           height: 600,
           alt: post.title,
+          
         },
       ],
       publishedTime: new Date(post._createdAt).toISOString(),
@@ -59,7 +60,6 @@ export async function generateStaticParams() {
   const slug: Post[] = await client.fetch(query);
   const slugRoutes = slug.map((slug) => slug.slug.current);
 
-  console.log("Generated slug routes:", slugRoutes);
 
   return slugRoutes.map((slug) => ({
     slug,

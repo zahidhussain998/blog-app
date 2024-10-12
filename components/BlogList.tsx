@@ -6,6 +6,7 @@ import urlFor from "../lib/urlFor";
 import ClientSideRoute from "./ClientSideRoute";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import AdSense from "./AdSense";
 
 
 type Props = {
