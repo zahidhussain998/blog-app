@@ -17,7 +17,8 @@ export const revalidate = 20;
 
 
 function BlogList({ posts }: Props) {
-    const [visiblePosts, setVisiblePosts] = useState(10); // State for visible posts
+    const [visiblePosts, setVisiblePosts] = useState(10);
+    const [searchQuery, setSearchQuery] = useState(""); // State for search query    // State for visible posts
 
     // Filter posts based on search query
   const filteredPosts = posts.filter((post) =>
