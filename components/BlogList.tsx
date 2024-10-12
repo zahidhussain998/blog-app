@@ -33,6 +33,12 @@ function BlogList({ posts }: Props) {
   return (
     <div>
 
+
+     <AdSense
+     adClient="ca-pub-8731247500470013"
+     adSlot="pub-8731247500470013"
+     
+     />
      
     
       <hr className="border-[#0A7DFF]"/>

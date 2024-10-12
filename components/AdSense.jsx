@@ -1,17 +1,28 @@
-// components/AdSense.js
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AdSense = ({ adClient, adSlot }) => {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    if (window) {
-      // Load AdSense script dynamically on the client-side
+    setIsClient(true);
+    if (window && !window.adsbygoogle) {
       const script = document.createElement('script');
-      script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8731247500470013`;
+      script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`;
       script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.onload = () => {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      };
+      script.onerror = () => {
+        console.error('AdSense script failed to load');
+      };
       document.body.appendChild(script);
+    } else if (window && window.adsbygoogle) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
-  }, []);
+  }, [adClient]);
+
+  if (!isClient) return null; // Don't render anything on the server
 
   return (
     <ins
@@ -26,6 +37,3 @@ const AdSense = ({ adClient, adSlot }) => {
 };
 
 export default AdSense;
-
-
-

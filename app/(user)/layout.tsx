@@ -38,15 +38,13 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-adsense-account" content="ca-pub-8731247500470013">
-
-        </meta>
+        <meta name="google-adsense-account" content="ca-pub-8731247500470013" />
         <title>netialap.com</title>
         <meta
           name="description"
           content="netiap.com is a world biggest website for reading and writing"
         />
-
+    
         <link rel="icon" href="/sh.png" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8731247500470013"
      crossOrigin="anonymous"></script>
@@ -54,7 +52,6 @@ export default function RootLayout({
       
       
       <body className={montserrat.className}>
-        
         <div className="max-w-7xl mx-auto">
           <Providers>
           <link rel="icon" href="/sh.png" />
