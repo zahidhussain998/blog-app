@@ -1,6 +1,6 @@
 # Netialap.com Blog Website
 
-Welcome to the Netialap.com Pulse Blog Website repository. This website is designed to share insightful blog posts and articles on various topics. If you're a contributor, this README will guide you through the setup and usage of the project.
+Welcome to the Netialap.com Blog Website repository. This website is designed to share insightful blog posts and articles on various topics. If you're a contributor, this README will guide you through the setup and usage of the project.
 
 ![Netialap.com Blog Website Screenshot]
 
